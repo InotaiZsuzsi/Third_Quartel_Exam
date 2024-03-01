@@ -2,19 +2,32 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User Registration</title>
-    <link rel="stylesheet" href="src/styles.css">
+    <link rel="stylesheet" href="./src/style.css" />
   </head>
-  <body>
-    <form>
-      <input type="email" id="email" placeholder="Email">
-      <input type="password" id="password" placeholder="Password">
-      <input type="password" id="confirmPassword" placeholder="Confirm Password">
-      <button type="button" id="registerButton">Register</button>
-    </form>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<body>
+    <div id="app">
+        <form id="registrationForm">
+            <input type="email" id="emailInput" placeholder="Email">
+            <input type="password" id="passwordInput" placeholder="Password">
+            <input type="password" id="confirmPasswordInput" placeholder="Confirm Password">
+            <button type="submit" id="registerButton" disabled>Register</button>
+        </form>
+    </div>
+
+    <div id="successMessage" class="hidden">
+        <p>Successful registration!</p>
+        <button id="backToHomePageButton">Back to homepage</button>
+    </div>
+
+    <div id="errorMessage" class="hidden">
+        <p id="errorText"></p>
+        <button id="hideErrorButton">Hide Error</button>
+    </div>
+
+    <script type="module" src="./app.js"></script>
+</body>
 </html>
+</html>
+
